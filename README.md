@@ -5,4 +5,4 @@
 -  [Array binary search](https://roaa1298.github.io/data-structures-and-algorithms/blob/main/challenge3/README.md)
 -  [Linked List](https://roaa1298.github.io/data-structures-and-algorithms/blob/main/challenge5/README.md)
 -  [Linked List 2](https://roaa1298.github.io/data-structures-and-algorithms/blob/main/challenge_6/README.md)
--  [Linked List 2](https://roaa1298.github.io/data-structures-and-algorithms/blob/main/challenge7/README.md)
+-  [Linked List kth](https://roaa1298.github.io/data-structures-and-algorithms/blob/main/challenge7/README.md)
