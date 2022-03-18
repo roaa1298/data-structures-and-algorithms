@@ -3,6 +3,7 @@
  */
 package challenge10;
 
+import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
 import org.junit.jupiter.api.Test;
@@ -144,6 +145,24 @@ class AppTest {
             String val=newQueue.dequeue();
             System.out.println(val);
         });
+    }
+    @Test void pseudoQueueTest() throws Exception {
+        pseudoQueue newQueue=new pseudoQueue();
+        newQueue.enQueue("1");
+        newQueue.enQueue("2");
+        newQueue.enQueue("3");
+        newQueue.enQueue("4");
+
+        assertEquals("1",newQueue.getS1().getTop().getValue());
+    }
+    @Test void pseudoDequeueTest() throws Exception {
+        pseudoQueue newQueue=new pseudoQueue();
+        newQueue.enQueue("1");
+        newQueue.enQueue("2");
+        newQueue.enQueue("3");
+        newQueue.enQueue("4");
+        String last=newQueue.deQueue();
+        assertEquals("1",last);
     }
 
 }

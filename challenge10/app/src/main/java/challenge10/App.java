@@ -3,6 +3,7 @@
  */
 package challenge10;
 
+import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
 
@@ -37,5 +38,13 @@ public class App {
         System.out.println(newQueue.dequeue());
         System.out.println(newQueue);
         System.out.println(newQueue.peek());
+
+        pseudoQueue newPseudoQueue=new pseudoQueue();
+        newPseudoQueue.enQueue("1");
+        newPseudoQueue.enQueue("2");
+        newPseudoQueue.enQueue("3");
+        newPseudoQueue.enQueue("4");
+        System.out.println(newPseudoQueue.getS1());
+
     }
 }
