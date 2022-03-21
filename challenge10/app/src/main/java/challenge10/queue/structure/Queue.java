@@ -2,7 +2,7 @@ package challenge10.queue.structure;
 
 import challenge10.queue.data.QueueNode;
 
-public class Queue {
+public class Queue<T> {
     private QueueNode back;
     private QueueNode front;
     private int size;

@@ -3,6 +3,9 @@
  */
 package challenge10;
 
+import challenge10.AnimalShelter.AnimalShelter;
+import challenge10.AnimalShelter.Cat;
+import challenge10.AnimalShelter.Dog;
 import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
@@ -45,6 +48,21 @@ public class App {
         newPseudoQueue.enQueue("3");
         newPseudoQueue.enQueue("4");
         System.out.println(newPseudoQueue.getS1());
+
+        System.out.println("--------------------------------------------- Animal shelter ------------------------");
+
+        AnimalShelter animal=new AnimalShelter();
+        animal.enQueue(new Cat("cat1"));
+        animal.enQueue(new Dog("dog1"));
+        animal.enQueue(new Cat("cat2"));
+        animal.enQueue(new Dog("dog2"));
+        animal.enQueue(new Cat("cat3"));
+
+        System.out.println(animal.getSize());
+        System.out.println(animal.deQueue("cat"));
+        System.out.println(animal.getSize());
+        System.out.println(animal);
+
 
     }
 }
