@@ -3,6 +3,9 @@
  */
 package challenge10;
 
+import challenge10.AnimalShelter.AnimalShelter;
+import challenge10.AnimalShelter.Cat;
+import challenge10.AnimalShelter.Dog;
 import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
@@ -164,5 +167,34 @@ class AppTest {
         String last=newQueue.deQueue();
         assertEquals("1",last);
     }
+
+    @Test void animalShelterTest() throws Exception {
+        AnimalShelter animal=new AnimalShelter();
+        animal.enQueue(new Cat("cat1"));
+        animal.enQueue(new Dog("dog1"));
+        animal.enQueue(new Cat("cat2"));
+        animal.enQueue(new Dog("dog2"));
+        animal.enQueue(new Cat("cat3"));
+
+        assertEquals("cat1",animal.deQueue("cat"));
+    }
+    @Test void animalShelterSizeTest() throws Exception {
+        AnimalShelter animal=new AnimalShelter();
+        animal.enQueue(new Cat("cat1"));
+        animal.enQueue(new Dog("dog1"));
+        animal.enQueue(new Cat("cat2"));
+        animal.enQueue(new Dog("dog2"));
+        animal.enQueue(new Cat("cat3"));
+
+        assertEquals(5,animal.getSize());
+    }
+    @Test void animalShelterEmptyTest() throws Exception {
+        AnimalShelter animal=new AnimalShelter();
+        animal.enQueue(new Dog("dog1"));
+        animal.enQueue(new Dog("dog2"));
+
+        assertNull(animal.deQueue("cat"));
+    }
+
 
 }
