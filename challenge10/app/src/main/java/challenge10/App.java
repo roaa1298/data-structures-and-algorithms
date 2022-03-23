@@ -9,6 +9,7 @@ import challenge10.AnimalShelter.Dog;
 import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
+import challenge10.validateBrackets.ValidateBrackets;
 
 public class App {
     public String getGreeting() {
@@ -63,6 +64,10 @@ public class App {
         System.out.println(animal.getSize());
         System.out.println(animal);
 
+        System.out.println("---------------------------------------------------------------------------------");
+        String str="[}";
+        ValidateBrackets ob=new ValidateBrackets();
+        System.out.println(ob.validateBrackets(str));
 
     }
 }

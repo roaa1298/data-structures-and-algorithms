@@ -9,6 +9,7 @@ import challenge10.AnimalShelter.Dog;
 import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
+import challenge10.validateBrackets.ValidateBrackets;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
@@ -194,6 +195,61 @@ class AppTest {
         animal.enQueue(new Dog("dog2"));
 
         assertNull(animal.deQueue("cat"));
+    }
+    @Test void validateBracketsTrueTest(){
+        String str="{}{Code}[Fellows](())";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(true,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsTrue2Test(){
+        String str="{}";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(true,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsTrue3Test(){
+        String str="{}(){}";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(true,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsTrue4Test(){
+        String str="()[[Extra Characters]]";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(true,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsTrue5Test(){
+        String str="(){}[[]]";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(true,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsFalse1Test(){
+        String str="[({}]";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(false,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsFalse2Test(){
+        String str=")";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(false,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsFalse3Test(){
+        String str="(](";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(false,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsFalse4Test(){
+        String str="{(})";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(false,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsFalse5Test(){
+        String str="{";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(false,ob.validateBrackets(str));
+    }
+    @Test void validateBracketsFalse6Test(){
+        String str="[}";
+        ValidateBrackets ob=new ValidateBrackets();
+        assertEquals(false,ob.validateBrackets(str));
     }
 
 
