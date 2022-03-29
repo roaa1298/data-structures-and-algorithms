@@ -6,10 +6,17 @@ package challenge10;
 import challenge10.AnimalShelter.AnimalShelter;
 import challenge10.AnimalShelter.Cat;
 import challenge10.AnimalShelter.Dog;
+import challenge10.Trees.data.BTNode;
+import challenge10.Trees.structure.BinarySearchTree;
+import challenge10.Trees.structure.BinaryTree;
 import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
 import challenge10.validateBrackets.ValidateBrackets;
+
+import static challenge10.Trees.structure.BinaryTree.TraversalOrder.INORDER;
+import static challenge10.Trees.structure.BinaryTree.TraversalOrder.POSTORDER;
+import static challenge10.Trees.structure.BinaryTree.TraversalOrder.PREORDER;
 
 public class App {
     public String getGreeting() {
@@ -69,5 +76,26 @@ public class App {
         ValidateBrackets ob=new ValidateBrackets();
         System.out.println(ob.validateBrackets(str));
 
+        System.out.println("-------------------------------trees--------------------------------------------------");
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        System.out.println(newTree.getRoot());
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(90);
+        newTree.add(55);
+        System.out.println(newTree);
+        System.out.println(newTree.getRoot());
+        System.out.println(newTree.traverse(INORDER));
+        System.out.println(newTree.traverse(PREORDER));
+        System.out.println(newTree.traverse(POSTORDER));
+        System.out.println(newTree.Contains(90));
+        System.out.println(newTree.Contains(9));
+        System.out.println("----------------------------------------------");
+
+        BinaryTree<Integer> tre=new BinaryTree<>(9);
+        System.out.println(tre.getRoot());
     }
 }

@@ -6,6 +6,9 @@ package challenge10;
 import challenge10.AnimalShelter.AnimalShelter;
 import challenge10.AnimalShelter.Cat;
 import challenge10.AnimalShelter.Dog;
+import challenge10.Trees.data.BTNode;
+import challenge10.Trees.structure.BinarySearchTree;
+import challenge10.Trees.structure.BinaryTree;
 import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
@@ -13,6 +16,7 @@ import challenge10.validateBrackets.ValidateBrackets;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
 
+import static challenge10.Trees.structure.BinaryTree.TraversalOrder.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -252,5 +256,117 @@ class AppTest {
         assertEquals(false,ob.validateBrackets(str));
     }
 
+    @Test void EmptyBinaryTreeTest(){
+        BinaryTree<Integer> tre=new BinaryTree<>();
+        assertNull(tre.getRoot());
+    }
+    @Test void BinaryTreeTest(){
+        BinaryTree<Integer> tre=new BinaryTree<>(9);
+        assertNotNull(tre.getRoot());
+    }
+    @Test void BinarySearchTreeLeftTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        assertEquals(4,newTree.getRoot().getLeftNode().getData());
+    }
+    @Test void BinarySearchTreeRightTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        assertEquals(8,newTree.getRoot().getRightNode().getData());
+    }
+    @Test void BinarySearchTreeRootTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        assertEquals(5,newTree.getRoot().getData());
+    }
+    @Test void BinarySearchTreeAddTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.getRoot().setLeftNode(new BTNode<Integer>(8) {
+            @Override
+            public int compareTo(BTNode<Integer> o) {
+                return 0;
+            }
+        });
+        newTree.getRoot().setRightNode(new BTNode<Integer>(4) {
+            @Override
+            public int compareTo(BTNode<Integer> o) {
+                return 0;
+            }
+        });
+        assertEquals(8,newTree.getRoot().getLeftNode().getData());
+    }
+    @Test void BinarySearchTreePreorderTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(90);
+        newTree.add(55);
+        assertEquals("[5, 4, 3, 8, 90, 55]",newTree.traverse(PREORDER).toString());
+    }
+    @Test void BinarySearchTreeInorderTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(90);
+        newTree.add(55);
+        assertEquals("[3, 4, 5, 8, 55, 90]",newTree.traverse(INORDER).toString());
+    }
+    @Test void BinarySearchTreePostorderTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(90);
+        newTree.add(55);
+        assertEquals("[3, 4, 55, 90, 8, 5]",newTree.traverse(POSTORDER).toString());
+    }
+    @Test void BinarySearchTreeContainsTrueTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(90);
+        newTree.add(55);
+        assertTrue(newTree.Contains(90));
+    }
+    @Test void BinarySearchTreeContainsFalseTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(90);
+        newTree.add(55);
+        assertFalse(newTree.Contains(9));
+    }
+    @Test void BinarySearchTreeSizeTest(){
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(90);
+        newTree.add(55);
+        assertEquals(6,newTree.getSize()); //it gives me 6 because binary search tree doesn't add redundant value
+    }
 
 }
