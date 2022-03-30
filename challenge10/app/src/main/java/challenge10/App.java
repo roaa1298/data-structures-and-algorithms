@@ -93,9 +93,12 @@ public class App {
         System.out.println(newTree.traverse(POSTORDER));
         System.out.println(newTree.Contains(90));
         System.out.println(newTree.Contains(9));
+        System.out.println("-------------------breadth first---------------------------");
+        System.out.println(newTree.breadthFirst());
         System.out.println("----------------------------------------------");
 
         BinaryTree<Integer> tre=new BinaryTree<>(9);
         System.out.println(tre.getRoot());
+
     }
 }

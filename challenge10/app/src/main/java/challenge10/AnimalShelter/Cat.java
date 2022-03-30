@@ -1,8 +1,8 @@
 package challenge10.AnimalShelter;
 
-public class Cat extends Animal{
+public class Cat<T> extends Animal<T>{
 
-    public Cat(String animalName) {
+    public Cat(T animalName) {
         super(animalName);
     }
 }

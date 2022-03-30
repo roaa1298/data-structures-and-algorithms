@@ -1,9 +1,9 @@
 package challenge10.AnimalShelter;
 
-public class Dog extends Animal{
+public class Dog<T> extends Animal<T>{
 
 
-    public Dog(String animalName) {
+    public Dog(T animalName) {
         super(animalName);
     }
 }
