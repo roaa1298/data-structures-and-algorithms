@@ -14,7 +14,6 @@ import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
 import challenge10.validateBrackets.ValidateBrackets;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.function.Executable;
 
 import static challenge10.Trees.structure.BinaryTree.TraversalOrder.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -89,12 +88,12 @@ class AppTest {
         });
     }
     @Test void queueEnqueueTest(){
-        Queue newQueue=new Queue();
+        Queue<String> newQueue=new Queue<String>();
         newQueue.enqueue("1");
         assertEquals(1,newQueue.getSize());
     }
     @Test void queueEnqueueMultipleTest(){
-        Queue newQueue=new Queue();
+        Queue<String> newQueue=new Queue<>();
         newQueue.enqueue("1");
         newQueue.enqueue("2");
         newQueue.enqueue("3");
@@ -103,7 +102,7 @@ class AppTest {
         assertEquals(5,newQueue.getSize());
     }
     @Test void DequeueTest() throws Exception {
-        Queue newQueue=new Queue();
+        Queue<String> newQueue=new Queue<String>();
         newQueue.enqueue("1");
         newQueue.enqueue("2");
         newQueue.enqueue("3");
@@ -113,7 +112,7 @@ class AppTest {
         assertEquals(4,newQueue.getSize());
     }
     @Test void queuePeekTest() throws Exception {
-        Queue newQueue=new Queue();
+        Queue<String> newQueue=new Queue<>();
         newQueue.enqueue("1");
         newQueue.enqueue("2");
         newQueue.enqueue("3");
@@ -123,7 +122,7 @@ class AppTest {
         assertEquals("1",newQueue.peek());
     }
     @Test void DequeueMultipleTest() throws Exception {
-        Queue newQueue=new Queue();
+        Queue<String> newQueue=new Queue<String>();
         newQueue.enqueue("1");
         newQueue.enqueue("2");
         newQueue.enqueue("3");
@@ -137,19 +136,19 @@ class AppTest {
         assertEquals(0,newQueue.getSize());
     }
     @Test void EmptyQueueTest(){
-        Queue newQueue=new Queue();
+        Queue<String> newQueue=new Queue<>();
         assertNull(newQueue.getFront());
     }
     @Test void queueEmptyPeekTest(){
         assertThrows(Exception.class, () -> {
-            Queue newQueue=new Queue();
+            Queue<String> newQueue=new Queue<>();
             String val=newQueue.peek();
             System.out.println(val);
         });
     }
     @Test void queueEmptyDequeueTest(){
         assertThrows(Exception.class, () -> {
-            Queue newQueue=new Queue();
+            Queue<String> newQueue=new Queue<>();
             String val=newQueue.dequeue();
             System.out.println(val);
         });
@@ -174,29 +173,29 @@ class AppTest {
     }
 
     @Test void animalShelterTest() throws Exception {
-        AnimalShelter animal=new AnimalShelter();
-        animal.enQueue(new Cat("cat1"));
-        animal.enQueue(new Dog("dog1"));
-        animal.enQueue(new Cat("cat2"));
-        animal.enQueue(new Dog("dog2"));
-        animal.enQueue(new Cat("cat3"));
+        AnimalShelter<String> animal=new AnimalShelter<>();
+        animal.enQueue(new Cat<>("cat1"));
+        animal.enQueue(new Dog<>("dog1"));
+        animal.enQueue(new Cat<>("cat2"));
+        animal.enQueue(new Dog<>("dog2"));
+        animal.enQueue(new Cat<>("cat3"));
 
-        assertEquals("cat1",animal.deQueue("cat"));
+        assertEquals("cat1",animal.deQueue("cat").getValue());
     }
     @Test void animalShelterSizeTest() throws Exception {
-        AnimalShelter animal=new AnimalShelter();
-        animal.enQueue(new Cat("cat1"));
-        animal.enQueue(new Dog("dog1"));
-        animal.enQueue(new Cat("cat2"));
-        animal.enQueue(new Dog("dog2"));
-        animal.enQueue(new Cat("cat3"));
+        AnimalShelter<String> animal=new AnimalShelter<>();
+        animal.enQueue(new Cat<>("cat1"));
+        animal.enQueue(new Dog<>("dog1"));
+        animal.enQueue(new Cat<>("cat2"));
+        animal.enQueue(new Dog<>("dog2"));
+        animal.enQueue(new Cat<>("cat3"));
 
         assertEquals(5,animal.getSize());
     }
     @Test void animalShelterEmptyTest() throws Exception {
-        AnimalShelter animal=new AnimalShelter();
-        animal.enQueue(new Dog("dog1"));
-        animal.enQueue(new Dog("dog2"));
+        AnimalShelter<String> animal=new AnimalShelter<>();
+        animal.enQueue(new Dog<>("dog1"));
+        animal.enQueue(new Dog<>("dog2"));
 
         assertNull(animal.deQueue("cat"));
     }
@@ -367,6 +366,23 @@ class AppTest {
         newTree.add(90);
         newTree.add(55);
         assertEquals(6,newTree.getSize()); //it gives me 6 because binary search tree doesn't add redundant value
+    }
+
+    @Test void breadthFirstTest() throws Exception {
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+        newTree.add(5);
+        newTree.add(8);
+        newTree.add(4);
+        newTree.add(3);
+        newTree.add(4);
+        newTree.add(90);
+        newTree.add(55);
+        assertEquals("[5, 4, 8, 3, 90, 55]",newTree.breadthFirst().toString());
+    }
+    @Test void breadthFirstEmptyTest() throws Exception {
+        BinarySearchTree<Integer> newTree=new BinarySearchTree<>();
+
+        assertNull(newTree.breadthFirst());
     }
 
 }

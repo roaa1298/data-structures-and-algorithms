@@ -2,9 +2,9 @@ package challenge10.AnimalShelter;
 
 import challenge10.queue.data.QueueNode;
 
-public class Animal extends QueueNode {
+public class Animal<T> extends QueueNode<T> {
 
-    public Animal(String animalName) {
+    public Animal(T animalName) {
         super(animalName);
     }
 

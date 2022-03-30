@@ -2,26 +2,26 @@ package challenge10.AnimalShelter;
 
 import challenge10.queue.structure.Queue;
 
-public class AnimalShelter {
-    Queue<Animal> cat=new Queue<>();
-    Queue<Animal> dog=new Queue<>();
+public class AnimalShelter<T> {
+    Queue<Animal<T>> cat=new Queue<>();
+    Queue<Animal<T>> dog=new Queue<>();
     private int size;
 
     public AnimalShelter() {
         size=0;
     }
-    public void enQueue(Animal animal){
+    public void enQueue(Animal<T> animal){
         if (animal instanceof Cat)
         {
-            cat.enqueue(animal.getValue());
+            cat.enqueue(animal);
             size++;
         } else if (animal instanceof Dog)
         {
-            dog.enqueue(animal.getValue());
+            dog.enqueue(animal);
             size++;
         }
     }
-    public String deQueue(String pref) throws Exception {
+    public Animal<T> deQueue(String pref) throws Exception {
         if (pref=="cat")
         {
             if (!cat.isEmpty())

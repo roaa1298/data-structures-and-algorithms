@@ -3,8 +3,8 @@ package challenge10.queue.structure;
 import challenge10.queue.data.QueueNode;
 
 public class Queue<T> {
-    private QueueNode back;
-    private QueueNode front;
+    private QueueNode<T> back;
+    private QueueNode<T> front;
     private int size;
     public Queue(){
         size=0;
@@ -12,8 +12,8 @@ public class Queue<T> {
         back= null;
     }
 
-    public void enqueue(String val){
-        QueueNode newNode=new QueueNode(val);
+    public void enqueue(T val){
+        QueueNode<T> newNode=new QueueNode<>(val);
         if (size==0)
         {
             this.front=newNode;
@@ -25,25 +25,25 @@ public class Queue<T> {
         newNode.setNext(null);
         this.size++;
     }
-    public String dequeue() throws Exception {
+    public T dequeue() throws Exception {
         if (isEmpty())
         {
             throw new Exception("Stack is Empty");
         }
         else{
-            String val=front.getValue();
+            T val=front.getValue();
             this.front=this.front.getNext();
             size--;
             return val;
         }
     }
-    public String peek() throws Exception {
+    public T peek() throws Exception {
         if (isEmpty())
         {
             throw new Exception("Stack is Empty");
         }
         else{
-            String val=front.getValue();
+            T val=front.getValue();
             return val;
         }
     }
@@ -61,11 +61,11 @@ public class Queue<T> {
         return size;
     }
 
-    public QueueNode getBack() {
+    public QueueNode<T> getBack() {
         return back;
     }
 
-    public QueueNode getFront() {
+    public QueueNode<T> getFront() {
         return front;
     }
 

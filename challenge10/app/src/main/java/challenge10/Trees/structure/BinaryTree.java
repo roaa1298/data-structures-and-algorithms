@@ -2,8 +2,10 @@ package challenge10.Trees.structure;
 
 import challenge10.Trees.data.BTNode;
 import challenge10.Trees.data.BinaryNode;
+import challenge10.queue.structure.Queue;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class BinaryTree<T extends Comparable<T>> {
     ArrayList<T> inOrderNode=new ArrayList<>();
@@ -86,6 +88,31 @@ public class BinaryTree<T extends Comparable<T>> {
         postOrder(treeNode.getRightNode());
         printNode(treeNode);
         postOrderNode.add(treeNode.getData());
+    }
+
+    public ArrayList<T> breadthFirst() throws Exception {
+        ArrayList<T> breadthList=new ArrayList<>();
+        if (root!=null){
+            Queue<BTNode<T>> q=new Queue<>();
+            q.enqueue(root);
+            BTNode<T> node;
+            while (!q.isEmpty()){
+                node=q.dequeue();
+                breadthList.add(node.getData());
+                if (node.getLeftNode()!=null){
+                    q.enqueue(node.getLeftNode());
+                }
+                if (node.getRightNode()!=null){
+                    q.enqueue(node.getRightNode());
+                }
+            }
+            return breadthList;
+        }
+        else {
+            System.out.println("Tree is Empty");
+            return null;
+        }
+
     }
 
     private void printNode(BTNode<T> node) {

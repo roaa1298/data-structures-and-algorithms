@@ -2,27 +2,27 @@ package challenge10.queue.data;
 
 import challenge10.stack.data.StackNode;
 
-public class QueueNode {
-    private String value;
-    private QueueNode next;
+public class QueueNode<T> {
+    private T value;
+    private QueueNode<T> next;
 
-    public QueueNode(String value){
+    public QueueNode(T value){
         this.value=value;
     }
 
-    public void setNext(QueueNode next) {
+    public void setNext(QueueNode<T> next) {
         this.next = next;
     }
 
-    public void setValue(String value) {
+    public void setValue(T value) {
         this.value = value;
     }
 
-    public QueueNode getNext() {
+    public QueueNode<T> getNext() {
         return next;
     }
 
-    public String getValue() {
+    public T getValue() {
         return value;
     }
 
