@@ -45,12 +45,15 @@ public class BinaryTree<T extends Comparable<T>> {
         switch (order) {
             case INORDER:
                 inOrder(root);
+                System.out.println("");
                 return inOrderNode;
             case PREORDER:
                 preOrder(root);
+                System.out.println("");
                 return preOrderNode;
             case POSTORDER:
                 postOrder(root);
+                System.out.println("");
                 return postOrderNode;
             default:
                 return null;
@@ -117,5 +120,21 @@ public class BinaryTree<T extends Comparable<T>> {
 
     private void printNode(BTNode<T> node) {
         System.out.print(node.getData()+" -> ");
+    }
+
+    public Integer getMaxNum(){
+        ArrayList<T> list=traverse(TraversalOrder.PREORDER);
+        if (root!=null) {
+            Integer maxNumber= (Integer) list.get(0);
+            for (T num : list) {
+                if ((Integer) num > maxNumber) {
+                    maxNumber = (Integer) num;
+                }
+            }
+            return maxNumber;
+        } else {
+            System.out.println("Tree is Empty");
+            return null;
+        }
     }
 }
