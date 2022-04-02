@@ -1,6 +1,6 @@
 package challenge10.Trees.data;
 
-public abstract class BTNode <T extends Comparable<T>> implements Comparable<BTNode<T>>{
+public class BTNode <T extends Comparable<T>> implements Comparable<BTNode<T>>{
     private final T data;
     private BTNode<T> leftNode;
     private BTNode<T> rightNode;
@@ -36,6 +36,11 @@ public abstract class BTNode <T extends Comparable<T>> implements Comparable<BTN
                 ", leftNode=" + leftNode +
                 ", rightNode=" + rightNode +
                 '}';
+    }
+
+    @Override
+    public int compareTo(BTNode<T> o) {
+        return 0;
     }
 }
 
