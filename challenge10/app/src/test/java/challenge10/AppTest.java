@@ -433,5 +433,36 @@ class AppTest {
 
         assertEquals(-2,maxTree.getMaxNum());
     }
+    @Test void fizzbuzzTest(){
+        BinaryTree<Integer> fizzbuzz=new BinaryTree<>();
+        fizzbuzz.setRoot(new BTNode<>(5));
+        fizzbuzz.getRoot().setLeftNode(new BTNode<>(4));
+        fizzbuzz.getRoot().setRightNode(new BTNode<>(3));
+        fizzbuzz.getRoot().getLeftNode().setLeftNode(new BTNode<>(15));
+        fizzbuzz.getRoot().getLeftNode().setRightNode(new BTNode<>(9));
+        fizzbuzz.getRoot().getRightNode().setLeftNode(new BTNode<>(6));
+        fizzbuzz.getRoot().getRightNode().setRightNode(new BTNode<>(7));
+        System.out.println(fizzbuzz.fizzbuzzTree(fizzbuzz));
+        assertEquals("Buzz",fizzbuzz.fizzbuzzTree(fizzbuzz).getRoot().getData());
+    }
+    @Test void fizzbuzzLeftNodeTest(){
+        BinaryTree<Integer> fizzbuzz=new BinaryTree<>();
+        fizzbuzz.setRoot(new BTNode<>(5));
+        fizzbuzz.getRoot().setLeftNode(new BTNode<>(4));
+        fizzbuzz.getRoot().setRightNode(new BTNode<>(3));
+        fizzbuzz.getRoot().getLeftNode().setLeftNode(new BTNode<>(15));
+        fizzbuzz.getRoot().getLeftNode().setRightNode(new BTNode<>(9));
+        fizzbuzz.getRoot().getRightNode().setLeftNode(new BTNode<>(6));
+        fizzbuzz.getRoot().getRightNode().setRightNode(new BTNode<>(7));
+        System.out.println(fizzbuzz.fizzbuzzTree(fizzbuzz));
+        assertEquals("4",fizzbuzz.fizzbuzzTree(fizzbuzz).getRoot().getLeftNode().getData());
+    }
+    @Test void fizzbuzzNullTest(){
+        BinaryTree<Integer> fizzbuzz=new BinaryTree<>();
+
+        System.out.println(fizzbuzz.fizzbuzzTree(fizzbuzz));
+        assertNull(fizzbuzz.fizzbuzzTree(fizzbuzz).getRoot().getData());
+    }
+
 
 }

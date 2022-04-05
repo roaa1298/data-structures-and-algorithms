@@ -1,7 +1,7 @@
 package challenge10.Trees.data;
 
 public class BTNode <T extends Comparable<T>> implements Comparable<BTNode<T>>{
-    private final T data;
+    private T data;
     private BTNode<T> leftNode;
     private BTNode<T> rightNode;
 
@@ -9,8 +9,14 @@ public class BTNode <T extends Comparable<T>> implements Comparable<BTNode<T>>{
         this.data = data;
     }
 
+    public BTNode() {}
+
     public T getData() {
         return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
     }
 
     public BTNode<T> getLeftNode() {

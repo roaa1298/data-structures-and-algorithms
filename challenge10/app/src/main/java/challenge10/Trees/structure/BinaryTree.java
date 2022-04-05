@@ -137,4 +137,45 @@ public class BinaryTree<T extends Comparable<T>> {
             return null;
         }
     }
+
+    public BinaryTree<String> fizzbuzzTree(BinaryTree<Integer> tree){
+        BinaryTree<String> newTree = new BinaryTree<>();
+        newTree.setRoot(new BTNode<>());
+
+        if (tree.getRoot() != null) {
+            recursionFizzBuzzTree(tree.getRoot(), newTree.getRoot());
+        } else {
+            System.out.println("tree is empty");
+        }
+
+        return newTree;
+    }
+    public void recursionFizzBuzzTree(BTNode<Integer> oldTree, BTNode<String> newTree){
+        if (oldTree.getData() % 5 == 0 && oldTree.getData() % 3 == 0) {
+            newTree.setData("FizzBuzz");
+        } else if (oldTree.getData() % 5 == 0) {
+            newTree.setData("Buzz");
+        } else if (oldTree.getData() % 3 == 0) {
+            newTree.setData("Fizz");
+        } else {
+            newTree.setData(oldTree.getData().toString());
+        }
+
+        if (oldTree.getLeftNode() != null) {
+            newTree.setLeftNode(new BTNode<>());
+            recursionFizzBuzzTree(oldTree.getLeftNode(), newTree.getLeftNode());
+        }
+
+        if (oldTree.getLeftNode() != null) {
+            newTree.setRightNode(new BTNode<>());
+            recursionFizzBuzzTree(oldTree.getRightNode(), newTree.getRightNode());
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "BinaryTree{" +
+                "root=" + root +
+                '}';
+    }
 }
