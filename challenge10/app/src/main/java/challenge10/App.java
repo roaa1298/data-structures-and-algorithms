@@ -118,6 +118,17 @@ public class App {
         node1.getRightNode().getRightNode().setLeftNode(new BTNode<Integer>(4));
 
         System.out.println("The max number => "+maxTree.getMaxNum());
+        System.out.println("------------------------- fizzbuzz ---------------------------------");
+        BinaryTree<Integer> fizzbuzz=new BinaryTree<>();
+        fizzbuzz.setRoot(new BTNode<>(5));
+        fizzbuzz.getRoot().setLeftNode(new BTNode<>(4));
+        fizzbuzz.getRoot().setRightNode(new BTNode<>(3));
+        fizzbuzz.getRoot().getLeftNode().setLeftNode(new BTNode<>(15));
+        fizzbuzz.getRoot().getLeftNode().setRightNode(new BTNode<>(9));
+        fizzbuzz.getRoot().getRightNode().setLeftNode(new BTNode<>(6));
+        fizzbuzz.getRoot().getRightNode().setRightNode(new BTNode<>(7));
+        System.out.println(fizzbuzz.fizzbuzzTree(fizzbuzz));
+
 
 
     }
