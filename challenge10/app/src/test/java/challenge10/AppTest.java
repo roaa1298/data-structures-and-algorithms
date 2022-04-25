@@ -6,6 +6,7 @@ package challenge10;
 import challenge10.AnimalShelter.AnimalShelter;
 import challenge10.AnimalShelter.Cat;
 import challenge10.AnimalShelter.Dog;
+import challenge10.InsertionSort.InsertionSort;
 import challenge10.Trees.data.BTNode;
 import challenge10.Trees.structure.BinarySearchTree;
 import challenge10.Trees.structure.BinaryTree;
@@ -14,6 +15,8 @@ import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
 import challenge10.validateBrackets.ValidateBrackets;
 import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
 
 import static challenge10.Trees.structure.BinaryTree.TraversalOrder.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -462,6 +465,12 @@ class AppTest {
 
         System.out.println(fizzbuzz.fizzbuzzTree(fizzbuzz));
         assertNull(fizzbuzz.fizzbuzzTree(fizzbuzz).getRoot().getData());
+    }
+    @Test void InsertionTest(){
+        int[] ar={8,4,23,42,16,15};
+        InsertionSort sortedArray=new InsertionSort();
+        System.out.println(Arrays.toString(sortedArray.Insertion(ar)));
+        assertEquals("[4, 8, 15, 16, 23, 42]",Arrays.toString(sortedArray.Insertion(ar)));
     }
 
 

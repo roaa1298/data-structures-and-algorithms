@@ -12,6 +12,8 @@ public class BinaryTree<T extends Comparable<T>> {
     ArrayList<T> preOrderNode=new ArrayList<>();
     ArrayList<T> postOrderNode=new ArrayList<>();
     private BTNode<T> root;
+    int treeSize=0;
+
 
     public BinaryTree() {
 
@@ -170,6 +172,40 @@ public class BinaryTree<T extends Comparable<T>> {
             newTree.setRightNode(new BTNode<>());
             recursionFizzBuzzTree(oldTree.getRightNode(), newTree.getRightNode());
         }
+    }
+
+    public Boolean directoryFile(BinaryTree<String> tree1,BinaryTree<String> tree2){
+        if (tree1.getRoot() == null && tree2.getRoot() == null) {
+            return true;
+        }
+        int size1=0;
+        int size2=0;
+        if (tree1.getRoot() != null && tree2.getRoot() != null) {
+            recursionDirectoryFiles(tree1.getRoot());
+            size1=treeSize;
+            treeSize=0;
+            recursionDirectoryFiles(tree2.getRoot());
+            size2=treeSize;
+            if (size1==size2)
+            {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        return false;
+    }
+    public void recursionDirectoryFiles(BTNode<String> rootTree){
+        if (rootTree.getLeftNode()==null && rootTree.getRightNode()==null){
+            treeSize++;
+        }
+        if (rootTree.getLeftNode() !=null){
+            recursionDirectoryFiles(rootTree.getLeftNode());
+        }
+        if (rootTree.getRightNode() !=null){
+            recursionDirectoryFiles(rootTree.getRightNode());
+        }
+
     }
 
     @Override

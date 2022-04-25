@@ -6,6 +6,7 @@ package challenge10;
 import challenge10.AnimalShelter.AnimalShelter;
 import challenge10.AnimalShelter.Cat;
 import challenge10.AnimalShelter.Dog;
+import challenge10.InsertionSort.InsertionSort;
 import challenge10.Trees.data.BTNode;
 import challenge10.Trees.structure.BinarySearchTree;
 import challenge10.Trees.structure.BinaryTree;
@@ -13,6 +14,8 @@ import challenge10.pseudoQueue.pseudoQueue;
 import challenge10.queue.structure.Queue;
 import challenge10.stack.structure.Stack;
 import challenge10.validateBrackets.ValidateBrackets;
+
+import java.util.Arrays;
 
 import static challenge10.Trees.structure.BinaryTree.TraversalOrder.INORDER;
 import static challenge10.Trees.structure.BinaryTree.TraversalOrder.POSTORDER;
@@ -128,6 +131,12 @@ public class App {
         fizzbuzz.getRoot().getRightNode().setLeftNode(new BTNode<>(6));
         fizzbuzz.getRoot().getRightNode().setRightNode(new BTNode<>(7));
         System.out.println(fizzbuzz.fizzbuzzTree(fizzbuzz));
+
+        System.out.println("------------------------- Insertion Sort ---------------------------------");
+
+        int[] ar={8,4,23,42,16,15};
+        InsertionSort sortedArray=new InsertionSort();
+        System.out.println(Arrays.toString(sortedArray.Insertion(ar)));
 
 
 
