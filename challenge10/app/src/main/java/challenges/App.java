@@ -9,6 +9,7 @@ import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
 import challenges.InsertionSort.InsertionSort;
 import challenges.MergeSort.MergeSort;
+import challenges.QuickSort.QuickSort;
 import challenges.Trees.data.BTNode;
 import challenges.Trees.structure.BinarySearchTree;
 import challenges.Trees.structure.BinaryTree;
@@ -146,6 +147,13 @@ public class App {
         System.out.println("the original array--> "+ Arrays.toString(ar2));
         MergeSort mergeSort=new MergeSort();
         System.out.println("sorted by merge sort algorithm= "+Arrays.toString(mergeSort.Mergesort(ar2)));
+
+        System.out.println("------------------------- quick Sort ---------------------------------");
+        int[] ar3={8,4,23,42,16,15};
+        System.out.println("the original array--> "+ Arrays.toString(ar3));
+        QuickSort quickSort=new QuickSort();
+        quickSort.quickSort(ar3,0,ar3.length-1);
+        System.out.println("sorted by quick sort algorithm= "+ Arrays.toString(ar3));
 
 
     }
