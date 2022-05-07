@@ -8,6 +8,7 @@ import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
 import challenges.InsertionSort.InsertionSort;
 import challenges.MergeSort.MergeSort;
+import challenges.QuickSort.QuickSort;
 import challenges.Trees.data.BTNode;
 import challenges.Trees.structure.BinarySearchTree;
 import challenges.Trees.structure.BinaryTree;
@@ -493,6 +494,19 @@ class AppTest {
         assertEquals("[]",Arrays.toString(mergeSort.Mergesort(ar2)));
     }
 
-
+    @Test void QuickTest(){
+        int[] ar3={8,4,23,42,16,15};
+        QuickSort quickSort=new QuickSort();
+        quickSort.quickSort(ar3,0,ar3.length-1);
+        System.out.println("sorted by quick sort algorithm= "+ Arrays.toString(ar3));
+        assertEquals("[4, 8, 15, 16, 23, 42]",Arrays.toString(ar3));
+    }
+    @Test void QuickEmptyTest(){
+        int[] ar3={};
+        QuickSort quickSort=new QuickSort();
+        quickSort.quickSort(ar3,0,ar3.length-1);
+        System.out.println("sorted by quick sort algorithm= "+ Arrays.toString(ar3));
+        assertEquals("[]",Arrays.toString(ar3));
+    }
 
 }
