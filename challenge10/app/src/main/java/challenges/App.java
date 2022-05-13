@@ -7,6 +7,7 @@ import challenges.AnimalShelter.Animal;
 import challenges.AnimalShelter.AnimalShelter;
 import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
+import challenges.HashMap.Structure.HashMap;
 import challenges.InsertionSort.InsertionSort;
 import challenges.MergeSort.MergeSort;
 import challenges.QuickSort.QuickSort;
@@ -155,6 +156,51 @@ public class App {
         quickSort.quickSort(ar3,0,ar3.length-1);
         System.out.println("sorted by quick sort algorithm= "+ Arrays.toString(ar3));
 
+        System.out.println("------------------------- hash map ---------------------------------");
+        HashMap<String, String> hashMap=new HashMap<>();
+        hashMap.put("java","java");
+        hashMap.put("python","python");
+        hashMap.put("kotlin","kotlin");
+        hashMap.put("js","js");
+        hashMap.put("html","html");
+        hashMap.put("css","css");
+        hashMap.put("php","php");
+        hashMap.put("c","c");
+
+        System.out.println("the size of the hashMap= "+hashMap.getSize());
+        System.out.println("********************************");
+
+        System.out.println("The value of kotlin key is --> "+hashMap.get("kotlin"));
+        System.out.println("The value of css key is --> "+hashMap.get("css"));
+        System.out.println("The value of js key is --> "+hashMap.get("js"));
+        System.out.println("The value of anythingElse key is --> "+hashMap.get("anythingElse"));  // return null
+        System.out.println("********************************");
+
+        // change the value of php key to "changed" because it is redundant
+        System.out.println("The value of php key is --> "+hashMap.get("php"));  // the value -> php
+        hashMap.put("php","changed");
+        System.out.println("The value of php key is --> "+hashMap.get("php"));  // the value -> changed
+        System.out.println("the size of the hashMap= "+hashMap.getSize());
+        System.out.println("********************************");
+
+        System.out.println("is the hashMap contains (html) ? "+hashMap.contains("html"));
+        System.out.println("is the hashMap contains (anythingElse) ? "+hashMap.contains("anythingElse"));
+        System.out.println("********************************");
+
+
+        System.out.println("The keys list: "+hashMap.keys());
+        System.out.println(hashMap.getBucketArray());
+        System.out.println("********************************");
+
+        // edge case -> key not exists
+        System.out.println("the index for css is -> "+hashMap.hash("css"));
+        System.out.println("the index for js is -> "+hashMap.hash("js"));
+        System.out.println("the index for c++ is -> "+hashMap.hash("c++")); // return null
+        System.out.println("********************************");
+
+        // edge case -> empty array
+        HashMap<String, String> hashMap2=new HashMap<>();
+        System.out.println("The keys list: "+hashMap2.keys());  // return []
 
     }
 }
