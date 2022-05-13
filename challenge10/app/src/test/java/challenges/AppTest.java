@@ -6,6 +6,7 @@ package challenges;
 import challenges.AnimalShelter.AnimalShelter;
 import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
+import challenges.HashMap.Structure.HashMap;
 import challenges.InsertionSort.InsertionSort;
 import challenges.MergeSort.MergeSort;
 import challenges.QuickSort.QuickSort;
@@ -507,6 +508,109 @@ class AppTest {
         quickSort.quickSort(ar3,0,ar3.length-1);
         System.out.println("sorted by quick sort algorithm= "+ Arrays.toString(ar3));
         assertEquals("[]",Arrays.toString(ar3));
+    }
+    // --------------------------- Hash map -------------------------------------------------------
+    @Test void putToHashMapTest(){
+        HashMap<String, String> hashMap=new HashMap<>();
+        hashMap.put("java","java");
+        hashMap.put("python","python");
+        hashMap.put("kotlin","kotlin");
+        hashMap.put("js","js");
+        hashMap.put("html","html");
+        hashMap.put("css","css");
+        hashMap.put("php","php");
+        hashMap.put("c","c");
+
+        System.out.println("------------------ hash table test -------------------------------------");
+        System.out.println("After adding 8 elements in the hash table= "+hashMap.getBucketArray());
+        assertEquals(8,hashMap.getSize());
+    }
+    @Test void getFromHashTableTest() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("java", "java");
+        hashMap.put("python", "python");
+        hashMap.put("kotlin", "kotlin");
+        hashMap.put("js", "js");
+        hashMap.put("html", "html");
+        hashMap.put("css", "css");
+        hashMap.put("php", "php");
+        hashMap.put("c", "c");
+
+        assertEquals("kotlin", hashMap.get("kotlin"));
+    }
+
+    @Test void getNullFromHashTableTest() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("java", "java");
+        hashMap.put("python", "python");
+        hashMap.put("kotlin", "kotlin");
+        hashMap.put("js", "js");
+        hashMap.put("html", "html");
+        hashMap.put("css", "css");
+        hashMap.put("php", "php");
+        hashMap.put("c", "c");
+
+        assertNull(hashMap.get("anythingElse"));
+    }
+    @Test void getListOfTheKeysFromHashTableTest() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("java", "java");
+        hashMap.put("python", "python");
+        hashMap.put("kotlin", "kotlin");
+        hashMap.put("js", "js");
+        hashMap.put("html", "html");
+        hashMap.put("css", "css");
+        hashMap.put("php", "php");
+        hashMap.put("c", "c");
+
+        assertEquals("[js, html, php, python, java, c, kotlin, css]",hashMap.keys().toString());
+    }
+
+    @Test void getFromBucketThatHasCollisionTest() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("java", "java");
+        hashMap.put("python", "python");
+        hashMap.put("kotlin", "kotlin");
+        hashMap.put("js", "js");
+        hashMap.put("html", "html");
+        hashMap.put("css", "css");
+        hashMap.put("php", "php");
+        hashMap.put("c", "c");
+
+        // css located in the last index that has 3 nodes, and it's the last node in the linked list
+        assertEquals("css", hashMap.get("css"));
+    }
+    @Test void getIndexForKeyInTheHashTableTest() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("java", "java");
+        hashMap.put("python", "python");
+        hashMap.put("kotlin", "kotlin");
+        hashMap.put("js", "js");
+        hashMap.put("html", "html");
+        hashMap.put("css", "css");
+        hashMap.put("php", "php");
+        hashMap.put("c", "c");
+
+        assertEquals(19, hashMap.hash("css"));
+    }
+
+    @Test void getListOfTheKeysFromEmptyHashTableTest() {
+        HashMap<String, String> hashMap2 = new HashMap<>();
+
+        assertEquals("[]",hashMap2.keys().toString());
+    }
+    @Test void getIndexForKeyNotInTheHashTableTest() {
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("java", "java");
+        hashMap.put("python", "python");
+        hashMap.put("kotlin", "kotlin");
+        hashMap.put("js", "js");
+        hashMap.put("html", "html");
+        hashMap.put("css", "css");
+        hashMap.put("php", "php");
+        hashMap.put("c", "c");
+
+        assertNull(hashMap.hash("C++"));
     }
 
 }
