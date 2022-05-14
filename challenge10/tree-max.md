@@ -3,7 +3,7 @@
 
 ## Whiteboard Process  
 
-![tree-max](tree-max.md)
+![tree-max](tree-max.png)
 
 ## Approach & Efficiency
 
