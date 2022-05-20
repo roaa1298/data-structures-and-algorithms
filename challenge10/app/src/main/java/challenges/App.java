@@ -12,6 +12,7 @@ import challenges.InsertionSort.InsertionSort;
 import challenges.MergeSort.MergeSort;
 import challenges.QuickSort.QuickSort;
 import challenges.RepeatedWord.RepeatedWord;
+import challenges.TreeIntersection.TreeIntersection;
 import challenges.Trees.data.BTNode;
 import challenges.Trees.structure.BinarySearchTree;
 import challenges.Trees.structure.BinaryTree;
@@ -213,8 +214,84 @@ public class App {
         System.out.println("********************************");
         System.out.println("the repeated word: "+newString.repeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York"));
         System.out.println("********************************");
-        System.out.println("words count: "+newString.wordsCount("Once upon a time, there was a brave princess who"));
+        System.out.println("words count: "+newString.wordsCount("Once upon a time, there was a brave princess who").get("a"));
 
+        System.out.println("------------------------- hash map tree-intersection -------------------------------------");
+        TreeIntersection treeIntersection=new TreeIntersection();
+        BinarySearchTree<Integer> tree1=new BinarySearchTree<>();
+        BinarySearchTree<Integer> tree2=new BinarySearchTree<>();
+
+        tree1.setRoot(new BTNode<>(150));
+        tree1.getRoot().setLeftNode(new BTNode<>(100));
+        tree1.getRoot().setRightNode(new BTNode<>(250));
+
+        tree1.getRoot().getLeftNode().setLeftNode(new BTNode<>(75));
+        tree1.getRoot().getLeftNode().setRightNode(new BTNode<>(160));
+
+        tree1.getRoot().getRightNode().setLeftNode(new BTNode<>(200));
+        tree1.getRoot().getRightNode().setRightNode(new BTNode<>(350));
+
+        tree1.getRoot().getLeftNode().getRightNode().setLeftNode(new BTNode<>(125));
+        tree1.getRoot().getLeftNode().getRightNode().setRightNode(new BTNode<>(175));
+
+        tree1.getRoot().getRightNode().getRightNode().setLeftNode(new BTNode<>(300));
+        tree1.getRoot().getRightNode().getRightNode().setRightNode(new BTNode<>(500));
+        // -------------------------------------  Tree2  -----------------------------------------
+        tree2.setRoot(new BTNode<>(42));
+        tree2.getRoot().setLeftNode(new BTNode<>(100));
+        tree2.getRoot().setRightNode(new BTNode<>(600));
+
+        tree2.getRoot().getLeftNode().setLeftNode(new BTNode<>(15));
+        tree2.getRoot().getLeftNode().setRightNode(new BTNode<>(160));
+
+        tree2.getRoot().getRightNode().setLeftNode(new BTNode<>(200));
+        tree2.getRoot().getRightNode().setRightNode(new BTNode<>(350));
+
+        tree2.getRoot().getLeftNode().getRightNode().setLeftNode(new BTNode<>(125));
+        tree2.getRoot().getLeftNode().getRightNode().setRightNode(new BTNode<>(175));
+
+        tree2.getRoot().getRightNode().getRightNode().setLeftNode(new BTNode<>(4));
+        tree2.getRoot().getRightNode().getRightNode().setRightNode(new BTNode<>(500));
+
+        System.out.println(treeIntersection.tree_intersection(tree1,tree2));
+
+        System.out.println("---------------------------------------- no matching ------------------------------------------");
+        BinarySearchTree<Integer> tree3=new BinarySearchTree<>();
+        BinarySearchTree<Integer> tree4=new BinarySearchTree<>();
+
+        tree3.setRoot(new BTNode<>(1));
+        tree3.getRoot().setLeftNode(new BTNode<>(2));
+        tree3.getRoot().setRightNode(new BTNode<>(3));
+
+        tree3.getRoot().getLeftNode().setLeftNode(new BTNode<>(4));
+        tree3.getRoot().getLeftNode().setRightNode(new BTNode<>(5));
+
+        tree3.getRoot().getRightNode().setLeftNode(new BTNode<>(6));
+        tree3.getRoot().getRightNode().setRightNode(new BTNode<>(7));
+
+        tree3.getRoot().getLeftNode().getRightNode().setLeftNode(new BTNode<>(8));
+        tree3.getRoot().getLeftNode().getRightNode().setRightNode(new BTNode<>(9));
+
+        tree3.getRoot().getRightNode().getRightNode().setLeftNode(new BTNode<>(10));
+        tree3.getRoot().getRightNode().getRightNode().setRightNode(new BTNode<>(11));
+        // -------------------------------------  Tree2  -----------------------------------------
+        tree4.setRoot(new BTNode<>(12));
+        tree4.getRoot().setLeftNode(new BTNode<>(13));
+        tree4.getRoot().setRightNode(new BTNode<>(14));
+
+        tree4.getRoot().getLeftNode().setLeftNode(new BTNode<>(15));
+        tree4.getRoot().getLeftNode().setRightNode(new BTNode<>(16));
+
+        tree4.getRoot().getRightNode().setLeftNode(new BTNode<>(17));
+        tree4.getRoot().getRightNode().setRightNode(new BTNode<>(18));
+
+        tree4.getRoot().getLeftNode().getRightNode().setLeftNode(new BTNode<>(19));
+        tree4.getRoot().getLeftNode().getRightNode().setRightNode(new BTNode<>(20));
+
+        tree4.getRoot().getRightNode().getRightNode().setLeftNode(new BTNode<>(21));
+        tree4.getRoot().getRightNode().getRightNode().setRightNode(new BTNode<>(22));
+
+        System.out.println(treeIntersection.tree_intersection(tree3,tree4));
 
     }
 }
