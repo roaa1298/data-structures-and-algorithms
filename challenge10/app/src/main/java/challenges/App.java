@@ -9,6 +9,7 @@ import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
 import challenges.HashMap.Structure.HashMap;
 import challenges.InsertionSort.InsertionSort;
+import challenges.LeftJoin.LeftJoin;
 import challenges.MergeSort.MergeSort;
 import challenges.QuickSort.QuickSort;
 import challenges.RepeatedWord.RepeatedWord;
@@ -292,6 +293,27 @@ public class App {
         tree4.getRoot().getRightNode().getRightNode().setRightNode(new BTNode<>(22));
 
         System.out.println(treeIntersection.tree_intersection(tree3,tree4));
+
+        // ------------------------------------ LEFT JOIN ----------------------------------------
+        System.out.println("------------------------- LEFT JOIN -------------------------------------");
+
+        LeftJoin tables=new LeftJoin();
+        HashMap<String, String> hash1=new HashMap<>();
+        hash1.put("diligent","employed");
+        hash1.put("fond","enamored");
+        hash1.put("guide","usher");
+        hash1.put("outfit","garb");
+        hash1.put("wrath","anger");
+
+        HashMap<String, String> hash2=new HashMap<>();
+        hash2.put("diligent","idle");
+        hash2.put("fond","averse");
+        hash2.put("guide","follow");
+        hash2.put("flow","jam");
+        hash2.put("wrath","delight");
+
+        System.out.println(tables.leftJoin(hash1,hash2).toString());
+
 
     }
 }
