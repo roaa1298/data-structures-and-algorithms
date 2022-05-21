@@ -8,6 +8,7 @@ import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
 import challenges.HashMap.Structure.HashMap;
 import challenges.InsertionSort.InsertionSort;
+import challenges.LeftJoin.LeftJoin;
 import challenges.MergeSort.MergeSort;
 import challenges.QuickSort.QuickSort;
 import challenges.RepeatedWord.RepeatedWord;
@@ -747,6 +748,70 @@ class AppTest {
 
         // Test
         assertEquals("[]",treeIntersection.tree_intersection(tree3,tree4).toString());
+    }
+
+    @Test void leftJoinTest(){
+        LeftJoin tables=new LeftJoin();
+        HashMap<String, String> hash1=new HashMap<>();
+        hash1.put("diligent","employed");
+        hash1.put("fond","enamored");
+        hash1.put("guide","usher");
+        hash1.put("outfit","garb");
+        hash1.put("wrath","anger");
+
+        HashMap<String, String> hash2=new HashMap<>();
+        hash2.put("diligent","idle");
+        hash2.put("fond","averse");
+        hash2.put("guide","follow");
+        hash2.put("flow","jam");
+        hash2.put("wrath","delight");
+
+        assertEquals("[[wrath, anger, delight], [diligent, employed, idle], [fond, enamored, averse], [guide, usher, follow], [outfit, garb, null]]",tables.leftJoin(hash1,hash2).toString());
+    }
+    @Test void leftJoinCheckNullTest(){
+        LeftJoin tables=new LeftJoin();
+        HashMap<String, String> hash1=new HashMap<>();
+        hash1.put("diligent","employed");
+        hash1.put("fond","enamored");
+        hash1.put("guide","usher");
+        hash1.put("outfit","garb");
+        hash1.put("wrath","anger");
+
+        HashMap<String, String> hash2=new HashMap<>();
+        hash2.put("diligent","idle");
+        hash2.put("fond","averse");
+        hash2.put("guide","follow");
+        hash2.put("flow","jam");
+        hash2.put("wrath","delight");
+
+        assertNull(tables.leftJoin(hash1, hash2).get(4).get(2));
+    }
+    @Test void leftJoinTable1EmptyTest(){
+        LeftJoin tables=new LeftJoin();
+        HashMap<String, String> hash1=new HashMap<>();
+
+        HashMap<String, String> hash2=new HashMap<>();
+        hash2.put("diligent","idle");
+        hash2.put("fond","averse");
+        hash2.put("guide","follow");
+        hash2.put("flow","jam");
+        hash2.put("wrath","delight");
+
+        assertEquals("[]",tables.leftJoin(hash1,hash2).toString());
+    }
+
+    @Test void leftJoinTable2EmptyTest(){
+        LeftJoin tables=new LeftJoin();
+        HashMap<String, String> hash1=new HashMap<>();
+        hash1.put("diligent","employed");
+        hash1.put("fond","enamored");
+        hash1.put("guide","usher");
+        hash1.put("outfit","garb");
+        hash1.put("wrath","anger");
+
+        HashMap<String, String> hash2=new HashMap<>();
+
+        assertEquals("[[wrath, anger, null], [diligent, employed, null], [fond, enamored, null], [guide, usher, null], [outfit, garb, null]]",tables.leftJoin(hash1,hash2).toString());
     }
 
 }
