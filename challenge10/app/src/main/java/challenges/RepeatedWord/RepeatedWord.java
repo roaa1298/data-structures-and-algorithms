@@ -44,4 +44,29 @@ public class RepeatedWord {
         }
         return newTable;
     }
+
+    public String mostCommonWord(String str){
+        String[] wordList=str.toLowerCase().split(" ");
+        HashMap<String,Integer> newTable=new HashMap<>();
+        int m=0;
+        String max=null;
+        for (int i=0 ; i<wordList.length ; i++)
+        {
+            if (!newTable.contains(wordList[i].replaceAll("[^a-zA-Z0-9]","")))
+            {
+                int c=1;
+                newTable.put(wordList[i].replaceAll("[^a-zA-Z0-9]",""),c);
+            } else {
+                int count=newTable.get(wordList[i].replaceAll("[^a-zA-Z0-9]",""));
+                newTable.put(wordList[i].replaceAll("[^a-zA-Z0-9]",""),count+1);
+            }
+            if (newTable.get(wordList[i].replaceAll("[^a-zA-Z0-9]",""))>m)
+            {
+                m=newTable.get(wordList[i].replaceAll("[^a-zA-Z0-9]",""));
+                max=wordList[i].replaceAll("[^a-zA-Z0-9]","");
+            }
+
+        }
+        return max;
+    }
 }

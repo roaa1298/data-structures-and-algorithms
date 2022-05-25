@@ -7,6 +7,8 @@ import challenges.AnimalShelter.Animal;
 import challenges.AnimalShelter.AnimalShelter;
 import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
+import challenges.Graph.Graph;
+import challenges.Graph.Vertex;
 import challenges.HashMap.Structure.HashMap;
 import challenges.InsertionSort.InsertionSort;
 import challenges.LeftJoin.LeftJoin;
@@ -313,6 +315,40 @@ public class App {
         hash2.put("wrath","delight");
 
         System.out.println(tables.leftJoin(hash1,hash2).toString());
+
+
+        // ------------------------------------ Graph ----------------------------------------
+        System.out.println("------------------------- Graph -------------------------------------");
+
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        System.out.println(graph.getNodes());
+        System.out.println(graph.getNeighbors(new Vertex("B")));
+        System.out.println(graph.getNeighbors(new Vertex("A")));
+        System.out.println(graph.getNeighbors(new Vertex("C")));
+        System.out.println(graph.getNeighbors(new Vertex("D")));
+        System.out.println(graph.getSize());
+
+        System.out.println(graph.addVertex("D"));
+        System.out.println(graph.getNeighbors(new Vertex("D")));
+        System.out.println(graph.getSize());
+
+        System.out.println("-------------------- Test edges -------------------------");
+        System.out.println(graph.getNeighbors(new Vertex("B")));
+        System.out.println(graph.getNeighbors(new Vertex("A")));
+        graph.addEdges("A","B",8);
+        System.out.println(graph.getNeighbors(new Vertex("B")));
+        System.out.println(graph.getNeighbors(new Vertex("A")));
 
 
     }

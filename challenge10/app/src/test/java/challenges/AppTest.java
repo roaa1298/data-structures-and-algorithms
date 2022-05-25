@@ -6,6 +6,8 @@ package challenges;
 import challenges.AnimalShelter.AnimalShelter;
 import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
+import challenges.Graph.Graph;
+import challenges.Graph.Vertex;
 import challenges.HashMap.Structure.HashMap;
 import challenges.InsertionSort.InsertionSort;
 import challenges.LeftJoin.LeftJoin;
@@ -813,5 +815,119 @@ class AppTest {
 
         assertEquals("[[wrath, anger, null], [diligent, employed, null], [fond, enamored, null], [guide, usher, null], [outfit, garb, null]]",tables.leftJoin(hash1,hash2).toString());
     }
+
+    @Test void addVertexTest(){
+        Graph graph=new Graph();
+        assertEquals("A",graph.addVertex("A").getData());
+    }
+    @Test void getNodesTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        assertEquals("[Vertex{data='A'}, Vertex{data='B'}, Vertex{data='C'}, Vertex{data='D'}]",graph.getNodes().toString());
+    }
+    @Test void graphSizeTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        assertEquals(4,graph.getSize());
+    }
+    @Test void getNeighborsTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        assertEquals("[Edge{vertex=Vertex{data='A'}, weight=4}, Edge{vertex=Vertex{data='D'}, weight=5}]",graph.getNeighbors(new Vertex("B")).toString());
+
+    }
+    @Test void addRedundantNodeTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        assertNull(graph.addVertex("D"));
+    }
+    @Test void addRedundantNodeSizeTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        graph.addVertex("D");
+
+        assertEquals(4,graph.getSize());
+    }
+    @Test void notExistsVertexTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        graph.addEdges("M","B",8);
+
+        assertNull(graph.getNeighbors(new Vertex("M")));
+    }
+    @Test void addExistsEdgeTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        System.out.println(graph.getNeighbors(new Vertex("B")));
+        graph.addEdges("A","B",8);
+        System.out.println(graph.getNeighbors(new Vertex("B")));
+
+        assertEquals(8,graph.getNeighbors(new Vertex("B")).get(0).getWeight());
+    }
+
 
 }
