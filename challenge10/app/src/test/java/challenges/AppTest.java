@@ -929,5 +929,43 @@ class AppTest {
         assertEquals(8,graph.getNeighbors(new Vertex("B")).get(0).getWeight());
     }
 
+    @Test void breadthFirstSearchTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        assertEquals("[Vertex{data='A'}, Vertex{data='B'}, Vertex{data='C'}, Vertex{data='D'}]",graph.bfs(new Vertex("A")).toString());
+    }
+    @Test void breadthFirstSearchNotExistsNodeTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+        System.out.println(graph.addVertex("B"));
+        System.out.println(graph.addVertex("C"));
+        System.out.println(graph.addVertex("D"));
+
+        graph.addEdges("A","B",4);
+        graph.addEdges("A","C",3);
+        graph.addEdges("A","D",9);
+        graph.addEdges("D","B",5);
+        graph.addEdges("C","D",6);
+
+        assertEquals("[]",graph.bfs(new Vertex("E")).toString());
+    }
+
+    @Test void breadthFirstSearchSingleVertexTest(){
+        Graph graph=new Graph();
+        System.out.println(graph.addVertex("A"));
+
+        assertEquals("[Vertex{data='A'}]",graph.bfs(new Vertex("A")).toString());
+    }
+
 
 }

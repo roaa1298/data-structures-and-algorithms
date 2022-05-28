@@ -350,6 +350,8 @@ public class App {
         System.out.println(graph.getNeighbors(new Vertex("B")));
         System.out.println(graph.getNeighbors(new Vertex("A")));
 
+        System.out.println("----------------- breadth first search in graph ---------------------");
+        System.out.println(graph.bfs(new Vertex("A")).toString());
 
     }
 }
