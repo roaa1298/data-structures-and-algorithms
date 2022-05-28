@@ -2,9 +2,7 @@ package challenges.Graph;
 
 import challenges.HashMap.Structure.HashMap;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Graph {
 
@@ -71,5 +69,26 @@ public class Graph {
 
     public List<Edge> getNeighbors(Vertex node){
         return adjVertices.get(node);
+    }
+
+    public Set<Vertex> bfs(Vertex root){
+        Set<Vertex> visited = new LinkedHashSet<>();
+        Queue<Vertex> queue = new LinkedList<>();
+        if (this.getNodes().contains(root)){
+            queue.add(root);
+            visited.add(root);
+        }
+        while (!queue.isEmpty()){
+            Vertex vertex = queue.poll();
+            for(Edge v : this.getNeighbors(vertex)){
+                if(!visited.contains((v.getVertex())))
+                {
+                    queue.add(v.getVertex());
+                    visited.add(v.getVertex());
+
+                }
+            }
+        }
+        return visited;
     }
 }
