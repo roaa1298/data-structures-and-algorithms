@@ -382,5 +382,28 @@ public class App {
 
         System.out.println(businessTrip.businessTrip(graph2,cityNames));
 
+        System.out.println("--------------------- Depth first search --------------------------");
+        Graph g=new Graph();
+        System.out.println(g.addVertex("A"));
+        System.out.println(g.addVertex("B"));
+        System.out.println(g.addVertex("C"));
+        System.out.println(g.addVertex("D"));
+        System.out.println(g.addVertex("E"));
+        System.out.println(g.addVertex("F"));
+        System.out.println(g.addVertex("G"));
+        System.out.println(g.addVertex("H"));
+
+        g.addEdges("A","B",150);
+        g.addEdges("A","D",82);
+        g.addEdges("B","C",99);
+        g.addEdges("B","D",42);
+        g.addEdges("C","G",105);
+        g.addEdges("D","E",73);
+        g.addEdges("D","H",26);
+        g.addEdges("D","F",250);
+        g.addEdges("H","F",37);
+
+        System.out.println(g.DepthFirstSearch(new Vertex("A")));
+
     }
 }

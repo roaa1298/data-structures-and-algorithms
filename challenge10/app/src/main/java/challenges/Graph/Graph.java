@@ -91,4 +91,31 @@ public class Graph {
         }
         return visited;
     }
+
+    public List<String> DepthFirstSearch(Vertex root){
+        List<String> depthList=new ArrayList<>();
+        if (!this.getNodes().contains(root)){
+            return null;
+        }
+        if (root!=null)
+        {
+            dfs(root,depthList);
+        }
+        return depthList;
+    }
+
+    private void dfs(Vertex root, List<String> depthList) {
+        depthList.add(root.getData());
+        if (this.getNeighbors(root)==null)
+        {
+            return;
+        }
+        for (Edge edge: this.getNeighbors(root))
+        {
+            if (!depthList.contains(edge.getVertex().getData()))
+            {
+                dfs(edge.getVertex(),depthList);
+            }
+        }
+    }
 }
