@@ -6,6 +6,7 @@ package challenges;
 import challenges.AnimalShelter.AnimalShelter;
 import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
+import challenges.BusinessTrip.BusinessTrip;
 import challenges.Graph.Graph;
 import challenges.Graph.Vertex;
 import challenges.HashMap.Structure.HashMap;
@@ -24,7 +25,9 @@ import challenges.stack.structure.Stack;
 import challenges.validateBrackets.ValidateBrackets;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import static challenges.Trees.structure.BinaryTree.TraversalOrder.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -967,5 +970,167 @@ class AppTest {
         assertEquals("[Vertex{data='A'}]",graph.bfs(new Vertex("A")).toString());
     }
 
+    /////////////////////////////////// Business Trip /////////////////////////////////////////////
+
+    @Test void businessTripTest(){
+        BusinessTrip businessTrip=new BusinessTrip();
+        Graph graph2=new Graph();
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstropolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdges("Pandora","Arendelle",150);
+        graph2.addEdges("Pandora","Metroville",82);
+        graph2.addEdges("Arendelle","Metroville",99);
+        graph2.addEdges("Arendelle","Monstropolis",42);
+        graph2.addEdges("Metroville","Monstropolis",105);
+        graph2.addEdges("Naboo","Monstropolis",73);
+        graph2.addEdges("Naboo","Metroville",26);
+        graph2.addEdges("Naboo","Narnia",250);
+        graph2.addEdges("Metroville","Narnia",37);
+        List<String> cityNames=new ArrayList<>();
+        cityNames.add("Arendelle");
+        cityNames.add("Monstropolis");
+        cityNames.add("Naboo");
+
+        System.out.println(businessTrip.businessTrip(graph2,cityNames));
+        assertEquals(115,businessTrip.businessTrip(graph2,cityNames));
+    }
+
+    @Test void businessTrip2Test(){
+        BusinessTrip businessTrip=new BusinessTrip();
+        Graph graph2=new Graph();
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstropolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdges("Pandora","Arendelle",150);
+        graph2.addEdges("Pandora","Metroville",82);
+        graph2.addEdges("Arendelle","Metroville",99);
+        graph2.addEdges("Arendelle","Monstropolis",42);
+        graph2.addEdges("Metroville","Monstropolis",105);
+        graph2.addEdges("Naboo","Monstropolis",73);
+        graph2.addEdges("Naboo","Metroville",26);
+        graph2.addEdges("Naboo","Narnia",250);
+        graph2.addEdges("Metroville","Narnia",37);
+        List<String> cityNames=new ArrayList<>();
+        cityNames.add("Narnia");
+        cityNames.add("Arendelle");
+        cityNames.add("Naboo");
+
+        System.out.println(businessTrip.businessTrip(graph2,cityNames));
+        assertNull(businessTrip.businessTrip(graph2, cityNames));
+    }
+
+    @Test void businessTrip3Test(){
+        BusinessTrip businessTrip=new BusinessTrip();
+        Graph graph2=new Graph();
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstropolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdges("Pandora","Arendelle",150);
+        graph2.addEdges("Pandora","Metroville",82);
+        graph2.addEdges("Arendelle","Metroville",99);
+        graph2.addEdges("Arendelle","Monstropolis",42);
+        graph2.addEdges("Metroville","Monstropolis",105);
+        graph2.addEdges("Naboo","Monstropolis",73);
+        graph2.addEdges("Naboo","Metroville",26);
+        graph2.addEdges("Naboo","Narnia",250);
+        graph2.addEdges("Metroville","Narnia",37);
+        List<String> cityNames=new ArrayList<>();
+        cityNames.add("Naboo");
+        cityNames.add("Pandora");
+
+        System.out.println(businessTrip.businessTrip(graph2,cityNames));
+        assertNull(businessTrip.businessTrip(graph2, cityNames));
+    }
+
+    @Test void businessTrip4Test(){
+        BusinessTrip businessTrip=new BusinessTrip();
+        Graph graph2=new Graph();
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstropolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdges("Pandora","Arendelle",150);
+        graph2.addEdges("Pandora","Metroville",82);
+        graph2.addEdges("Arendelle","Metroville",99);
+        graph2.addEdges("Arendelle","Monstropolis",42);
+        graph2.addEdges("Metroville","Monstropolis",105);
+        graph2.addEdges("Naboo","Monstropolis",73);
+        graph2.addEdges("Naboo","Metroville",26);
+        graph2.addEdges("Naboo","Narnia",250);
+        graph2.addEdges("Metroville","Narnia",37);
+        List<String> cityNames=new ArrayList<>();
+        cityNames.add("Metroville");
+        cityNames.add("Pandora");
+
+        System.out.println(businessTrip.businessTrip(graph2,cityNames));
+        assertEquals(82,businessTrip.businessTrip(graph2,cityNames));
+    }
+    @Test void cityNotExistsInTheGraphTest(){
+        BusinessTrip businessTrip=new BusinessTrip();
+        Graph graph2=new Graph();
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstropolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdges("Pandora","Arendelle",150);
+        graph2.addEdges("Pandora","Metroville",82);
+        graph2.addEdges("Arendelle","Metroville",99);
+        graph2.addEdges("Arendelle","Monstropolis",42);
+        graph2.addEdges("Metroville","Monstropolis",105);
+        graph2.addEdges("Naboo","Monstropolis",73);
+        graph2.addEdges("Naboo","Metroville",26);
+        graph2.addEdges("Naboo","Narnia",250);
+        graph2.addEdges("Metroville","Narnia",37);
+        List<String> cityNames=new ArrayList<>();
+        cityNames.add("Narnia");
+        cityNames.add("ssssss");
+        cityNames.add("Naboo");
+
+        System.out.println(businessTrip.businessTrip(graph2,cityNames));
+        assertNull(businessTrip.businessTrip(graph2, cityNames));
+    }
+    @Test void EmptyCityListTest(){
+        BusinessTrip businessTrip=new BusinessTrip();
+        Graph graph2=new Graph();
+        graph2.addVertex("Pandora");
+        graph2.addVertex("Arendelle");
+        graph2.addVertex("Metroville");
+        graph2.addVertex("Monstropolis");
+        graph2.addVertex("Narnia");
+        graph2.addVertex("Naboo");
+
+        graph2.addEdges("Pandora","Arendelle",150);
+        graph2.addEdges("Pandora","Metroville",82);
+        graph2.addEdges("Arendelle","Metroville",99);
+        graph2.addEdges("Arendelle","Monstropolis",42);
+        graph2.addEdges("Metroville","Monstropolis",105);
+        graph2.addEdges("Naboo","Monstropolis",73);
+        graph2.addEdges("Naboo","Metroville",26);
+        graph2.addEdges("Naboo","Narnia",250);
+        graph2.addEdges("Metroville","Narnia",37);
+        List<String> cityNames=new ArrayList<>();
+
+        System.out.println(businessTrip.businessTrip(graph2,cityNames));
+        assertNull(businessTrip.businessTrip(graph2, cityNames));
+    }
 
 }
