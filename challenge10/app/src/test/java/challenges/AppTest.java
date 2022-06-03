@@ -1132,5 +1132,67 @@ class AppTest {
         System.out.println(businessTrip.businessTrip(graph2,cityNames));
         assertNull(businessTrip.businessTrip(graph2, cityNames));
     }
+    /////////////////////////////////// Depth first search ///////////////////////////////////////////
+    @Test void depthFirstSearchTest(){
+        Graph g=new Graph();
+        System.out.println(g.addVertex("A"));
+        System.out.println(g.addVertex("B"));
+        System.out.println(g.addVertex("C"));
+        System.out.println(g.addVertex("D"));
+        System.out.println(g.addVertex("E"));
+        System.out.println(g.addVertex("F"));
+        System.out.println(g.addVertex("G"));
+        System.out.println(g.addVertex("H"));
+
+        g.addEdges("A","B",150);
+        g.addEdges("A","D",82);
+        g.addEdges("B","C",99);
+        g.addEdges("B","D",42);
+        g.addEdges("C","G",105);
+        g.addEdges("D","E",73);
+        g.addEdges("D","H",26);
+        g.addEdges("D","F",250);
+        g.addEdges("H","F",37);
+
+        assertEquals("[A, B, C, G, D, E, H, F]",g.DepthFirstSearch(new Vertex("A")).toString());
+    }
+
+    @Test void depthFirstSearchNotExistsRootTest(){
+        Graph g=new Graph();
+        System.out.println(g.addVertex("A"));
+        System.out.println(g.addVertex("B"));
+        System.out.println(g.addVertex("C"));
+        System.out.println(g.addVertex("D"));
+        System.out.println(g.addVertex("E"));
+        System.out.println(g.addVertex("F"));
+        System.out.println(g.addVertex("G"));
+        System.out.println(g.addVertex("H"));
+
+        g.addEdges("A","B",150);
+        g.addEdges("A","D",82);
+        g.addEdges("B","C",99);
+        g.addEdges("B","D",42);
+        g.addEdges("C","G",105);
+        g.addEdges("D","E",73);
+        g.addEdges("D","H",26);
+        g.addEdges("D","F",250);
+        g.addEdges("H","F",37);
+
+        assertNull(g.DepthFirstSearch(new Vertex("S")));
+    }
+    @Test void depthFirstSearchEmptyEdgesTest(){
+        Graph g=new Graph();
+        System.out.println(g.addVertex("A"));
+        System.out.println(g.addVertex("B"));
+        System.out.println(g.addVertex("C"));
+        System.out.println(g.addVertex("D"));
+        System.out.println(g.addVertex("E"));
+        System.out.println(g.addVertex("F"));
+        System.out.println(g.addVertex("G"));
+        System.out.println(g.addVertex("H"));
+
+
+        assertEquals("[A]",g.DepthFirstSearch(new Vertex("A")).toString());
+    }
 
 }
