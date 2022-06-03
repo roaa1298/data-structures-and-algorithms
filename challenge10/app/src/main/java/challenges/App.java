@@ -7,6 +7,7 @@ import challenges.AnimalShelter.Animal;
 import challenges.AnimalShelter.AnimalShelter;
 import challenges.AnimalShelter.Cat;
 import challenges.AnimalShelter.Dog;
+import challenges.BusinessTrip.BusinessTrip;
 import challenges.Graph.Graph;
 import challenges.Graph.Vertex;
 import challenges.HashMap.Structure.HashMap;
@@ -24,7 +25,9 @@ import challenges.queue.structure.Queue;
 import challenges.stack.structure.Stack;
 import challenges.validateBrackets.ValidateBrackets;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 import static challenges.Trees.structure.BinaryTree.TraversalOrder.INORDER;
 import static challenges.Trees.structure.BinaryTree.TraversalOrder.POSTORDER;
@@ -352,6 +355,32 @@ public class App {
 
         System.out.println("----------------- breadth first search in graph ---------------------");
         System.out.println(graph.bfs(new Vertex("A")).toString());
+
+        System.out.println("--------------------- graph-business-trip --------------------------");
+        BusinessTrip businessTrip=new BusinessTrip();
+        Graph graph2=new Graph();
+        System.out.println(graph2.addVertex("Pandora"));
+        System.out.println(graph2.addVertex("Arendelle"));
+        System.out.println(graph2.addVertex("Metroville"));
+        System.out.println(graph2.addVertex("Monstropolis"));
+        System.out.println(graph2.addVertex("Narnia"));
+        System.out.println(graph2.addVertex("Naboo"));
+
+        graph2.addEdges("Pandora","Arendelle",150);
+        graph2.addEdges("Pandora","Metroville",82);
+        graph2.addEdges("Arendelle","Metroville",99);
+        graph2.addEdges("Arendelle","Monstropolis",42);
+        graph2.addEdges("Metroville","Monstropolis",105);
+        graph2.addEdges("Naboo","Monstropolis",73);
+        graph2.addEdges("Naboo","Metroville",26);
+        graph2.addEdges("Naboo","Narnia",250);
+        graph2.addEdges("Metroville","Narnia",37);
+        List<String> cityNames=new ArrayList<>();
+        cityNames.add("Arendelle");
+        cityNames.add("Monstropolis");
+        cityNames.add("Naboo");
+
+        System.out.println(businessTrip.businessTrip(graph2,cityNames));
 
     }
 }
