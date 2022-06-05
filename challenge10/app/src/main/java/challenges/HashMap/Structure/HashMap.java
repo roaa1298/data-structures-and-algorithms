@@ -145,4 +145,10 @@ public class HashMap<K, V> {
         }
     }
 
+    @Override
+    public String toString() {
+        return "HashMap{" +
+                "bucketArray=" + bucketArray +
+                '}';
+    }
 }

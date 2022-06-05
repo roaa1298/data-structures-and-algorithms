@@ -19,6 +19,7 @@ import challenges.TreeIntersection.TreeIntersection;
 import challenges.Trees.data.BTNode;
 import challenges.Trees.structure.BinarySearchTree;
 import challenges.Trees.structure.BinaryTree;
+import challenges.challenge39.TwoNodesConnected;
 import challenges.pseudoQueue.pseudoQueue;
 import challenges.queue.structure.Queue;
 import challenges.stack.structure.Stack;
@@ -1193,6 +1194,48 @@ class AppTest {
 
 
         assertEquals("[A]",g.DepthFirstSearch(new Vertex("A")).toString());
+    }
+
+    /////////////////////////////////////////////// Connected and Disconnected Graphs /////////////////////////
+
+    @Test void TwoNodesConnectedTest(){
+        Graph g2=new Graph();
+        Vertex v1=g2.addVertex("A");
+        Vertex v2=g2.addVertex("B");
+        Vertex v3=g2.addVertex("C");
+        Vertex v4=g2.addVertex("D");
+        Vertex v5=g2.addVertex("E");
+        Vertex v6=g2.addVertex("F");
+        Vertex v7=g2.addVertex("G");
+        Vertex v8=g2.addVertex("H");
+
+        g2.addEdges("A","B",150);
+        g2.addEdges("A","D",82);
+        g2.addEdges("B","C",99);
+        g2.addEdges("B","D",42);
+        g2.addEdges("C","G",105);
+        g2.addEdges("D","E",73);
+        g2.addEdges("D","H",26);
+        g2.addEdges("D","F",250);
+        g2.addEdges("H","F",37);
+
+        TwoNodesConnected twoNodesConnected=new TwoNodesConnected();
+        assertTrue(twoNodesConnected.areTwoNodesConnected(g2, v2, v6));
+    }
+
+    @Test void TwoNodesNotConnectedTest(){
+        Graph g2=new Graph();
+        Vertex v1=g2.addVertex("A");
+        Vertex v2=g2.addVertex("B");
+        Vertex v3=g2.addVertex("C");
+        Vertex v4=g2.addVertex("D");
+
+        g2.addEdges("A","B",150);
+        g2.addEdges("C","D",82);
+
+
+        TwoNodesConnected twoNodesConnected=new TwoNodesConnected();
+        assertFalse(twoNodesConnected.areTwoNodesConnected(g2, v2, v4));
     }
 
 }

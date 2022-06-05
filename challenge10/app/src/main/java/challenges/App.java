@@ -20,6 +20,7 @@ import challenges.TreeIntersection.TreeIntersection;
 import challenges.Trees.data.BTNode;
 import challenges.Trees.structure.BinarySearchTree;
 import challenges.Trees.structure.BinaryTree;
+import challenges.challenge39.TwoNodesConnected;
 import challenges.pseudoQueue.pseudoQueue;
 import challenges.queue.structure.Queue;
 import challenges.stack.structure.Stack;
@@ -404,6 +405,32 @@ public class App {
         g.addEdges("H","F",37);
 
         System.out.println(g.DepthFirstSearch(new Vertex("A")));
+
+        System.out.println("--------------------- Are two nodes connected? --------------------------");
+        Graph g2=new Graph();
+        Vertex v1=g2.addVertex("A");
+        Vertex v2=g2.addVertex("B");
+        Vertex v3=g2.addVertex("C");
+        Vertex v4=g2.addVertex("D");
+        Vertex v5=g2.addVertex("E");
+        Vertex v6=g2.addVertex("F");
+        Vertex v7=g2.addVertex("G");
+        Vertex v8=g2.addVertex("H");
+
+        g2.addEdges("A","B",150);
+        g2.addEdges("A","D",82);
+        g2.addEdges("B","C",99);
+        g2.addEdges("B","D",42);
+        g2.addEdges("C","G",105);
+        g2.addEdges("D","E",73);
+        g2.addEdges("D","H",26);
+        g2.addEdges("D","F",250);
+        g2.addEdges("H","F",37);
+//        System.out.println(g2.bfs(v2));
+        System.out.println(g2.getAdjVertices().toString());
+
+        TwoNodesConnected twoNodesConnected=new TwoNodesConnected();
+        System.out.println(twoNodesConnected.areTwoNodesConnected(g2,v2,v6));
 
     }
 }
