@@ -10,7 +10,7 @@
 
 
 ## Whiteboard Process
-![tree-fizz-buzz](tree-fizz-buzz.png)
+![tree-fizz-buzz](../Whiteboard/tree-fizz-buzz.png)
 
 ## Approach & Efficiency
 - i used two methods to solve this challenge the first one to check if the tree is null or not and call the second method to check all the values in the tree in recursion way.  

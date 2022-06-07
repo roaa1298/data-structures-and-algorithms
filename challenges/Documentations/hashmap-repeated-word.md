@@ -5,7 +5,7 @@
 - Stretch Goals: Modify your function to return a count of each of the words in the provided string.  
 
 ## Whiteboard Process
-![hashmap-repeated-word](hashmap-repeated-word.png)
+![hashmap-repeated-word](../Whiteboard/hashmap-repeated-word.png)
 
 ### Stretch Goals
    ```

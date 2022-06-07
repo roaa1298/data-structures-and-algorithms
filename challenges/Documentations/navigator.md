@@ -9,4 +9,4 @@
 
 ## Whiteboard
 
-![navigator](challenge41_roaa.png)
+![navigator](../Whiteboard/challenge41_roaa.png)

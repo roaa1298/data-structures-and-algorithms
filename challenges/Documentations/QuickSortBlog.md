@@ -42,16 +42,16 @@ ALGORITHM Swap(arr, i, low)
 - **Sample Array: [8,4,23,42,16,15]**  
 
 ### Trace 1 --> Partition
-![trace1](Quick-trace1.png)  
+![trace1](../Whiteboard/Quick-trace1.png)  
 
 ### Trace 2  --> sort the left side 
-![trace2](Quick-trace2.png)  
+![trace2](../Whiteboard/Quick-trace2.png)  
 
 ### Trace 3 --> sort the right side
-![trace3](Quick-trace3.png)
+![trace3](../Whiteboard/Quick-trace3.png)
 
 ### The final result  
-![final](Quick-final.png)  
+![final](../Whiteboard/Quick-final.png)  
 
 ## Efficiency  
 

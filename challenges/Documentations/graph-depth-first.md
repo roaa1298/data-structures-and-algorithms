@@ -17,4 +17,4 @@
 - The complexity for the space -> O(V)
 
 ## Solution
-![graph-depth-first](graph-depth-first.png)
+![graph-depth-first](../Whiteboard/graph-depth-first.png)

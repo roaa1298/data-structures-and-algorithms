@@ -20,6 +20,6 @@
 
 
 ## Solution
-![hashmap-left-join](hashmap-left-join.png)  
+![hashmap-left-join](../Whiteboard/hashmap-left-join.png)  
 
 

@@ -2,7 +2,7 @@
 - write a function to sort an array of integer numbers in ascending order using merge sort algorithm.
 
 ## Whiteboard Process
-![mergeSort](mergeSort.png)
+![mergeSort](../Whiteboard/mergeSort.png)
 
 ## Approach & Efficiency
 - It divides the input array into two halves, calls itself for the two halves, and then it merges the two sorted halves. The merge() function is used for merging two halves.  

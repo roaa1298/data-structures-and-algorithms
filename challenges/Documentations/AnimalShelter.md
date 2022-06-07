@@ -14,7 +14,7 @@
 
 
 ## Whiteboard Process
-![stack-queue-animal-shelter](stack-queue-animal-shelter.png)
+![stack-queue-animal-shelter](../Whiteboard/stack-queue-animal-shelter.png)
 
 ## Approach & Efficiency
 - At first i created Animal class, from this class we should be able to create objects of type dogs and cats, so i create a new two classes (Dog, Cat) and they extends the Animal class.  

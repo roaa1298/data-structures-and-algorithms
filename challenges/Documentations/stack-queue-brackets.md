@@ -2,7 +2,7 @@
 - Write a function called validate brackets Return true if the brackets in the string from the argument are balanced otherwise will return false.
 
 ## Whiteboard Process
-![stack-queue-brackets](stack-queue-brackets.png)
+![stack-queue-brackets](../Whiteboard/stack-queue-brackets.png)
 
 ## Approach & Efficiency
 - looping through the string character by character, and if the character is opening bracket i added it to the stack, but if the character is closing bracket i will check if last element in the stack is matching the closing bracket, if matching i will pop the last element in the stack if not i will add the closing bracket to the stack, and so on.  

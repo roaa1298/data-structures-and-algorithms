@@ -7,7 +7,7 @@
 
 
 ## Whiteboard Process
-![graph-breadth-first](graph-breadth-first.png)
+![graph-breadth-first](../Whiteboard/graph-breadth-first.png)
 
 ## Approach & Efficiency
 - I used the queue to hold the root node, then remove it from the queue and add its neighbors to the queue, and do the same for every node in the queue. 

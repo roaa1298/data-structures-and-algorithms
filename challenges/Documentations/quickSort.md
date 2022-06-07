@@ -3,7 +3,7 @@
 
 
 ## Whiteboard Process
-![quickSort](quickSort.png)
+![quickSort](../Whiteboard/quickSort.png)
 
 ## Approach & Efficiency
 - Quick sort is a sorting algorithm uses divide and conquer approach, the array is divided into sub-arrays by selecting a pivot element (element selected from the array).  

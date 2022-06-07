@@ -4,7 +4,7 @@
 - output : the cost of the trip (if it’s possible) or null (if not).
 
 ## Whiteboard Process
-![graph-business-trip](graph-business-trip.png)
+![graph-business-trip](../Whiteboard/graph-business-trip.png)
 
 ## Approach & Efficiency
 - looping through the city list and check every two cities, if the second city have an edge with the first city. if its have an edge we will add the weight of the edge to the total cost of the trip. but if there is no edge between any two cities of the city list then we will return null because it will be a trip with not direct flights.  

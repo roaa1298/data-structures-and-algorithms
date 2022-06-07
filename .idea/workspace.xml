@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4cf403bd-fb10-4efd-b376-a0f7080b5a87" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/challeng_6/Append_linkedList.png:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challeng_6/inserAfter_linkedList.png:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challeng_6/inserBefore_linkedList.png:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge1/array-reverse.png:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/AnimalShelter.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/AnimalShelter.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/BreadthFirst.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/BreadthFirst.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/InsertionSort.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/InsertionSort.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/InsertionSort.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/InsertionSort.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/InsertionSortBlog.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/InsertionSortBlog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/MergeSortBlog.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/MergeSortBlog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/Quick-final.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/Quick-final.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/Quick-trace1.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/Quick-trace1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/Quick-trace2.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/Quick-trace2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/Quick-trace3.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/Quick-trace3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/QuickSortBlog.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/QuickSortBlog.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/README2.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/stack-queue-pseudo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/TREES.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/TREES.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/AnimalShelter/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/AnimalShelter/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/AnimalShelter/AnimalShelter.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/AnimalShelter/AnimalShelter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/AnimalShelter/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/AnimalShelter/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/AnimalShelter/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/AnimalShelter/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/BusinessTrip/BusinessTrip.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/BusinessTrip/BusinessTrip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/Graph/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/Graph/Edge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/Graph/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/Graph/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/Graph/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/Graph/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/HashMap/Data/HashNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/HashMap/Data/HashNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/HashMap/Structure/HashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/HashMap/Structure/HashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/InsertionSort/InsertionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/InsertionSort/InsertionSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/LeftJoin/LeftJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/LeftJoin/LeftJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/MergeSort/MergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/MergeSort/MergeSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/QuickSort/QuickSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/QuickSort/QuickSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/RepeatedWord/RepeatedWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/RepeatedWord/RepeatedWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/TreeIntersection/TreeIntersection.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/TreeIntersection/TreeIntersection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/Trees/data/BTNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/Trees/data/BTNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/Trees/data/BinaryNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/Trees/data/BinaryNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/Trees/structure/BinarySearchTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/Trees/structure/BinarySearchTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/Trees/structure/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/Trees/structure/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/challenge39/TwoNodesConnected.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/challenge39/TwoNodesConnected.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/challenge41/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/challenge41/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/pseudoQueue/pseudoQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/pseudoQueue/pseudoQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/queue/data/QueueNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/queue/data/QueueNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/queue/structure/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/queue/structure/Queue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/stack/data/StackNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/stack/data/StackNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/stack/structure/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/stack/structure/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/main/java/challenges/validateBrackets/ValidateBrackets.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/main/java/challenges/validateBrackets/ValidateBrackets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/app/src/test/java/challenges/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/app/src/test/java/challenges/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/challeng41.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/challeng41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/challenge41_roaa.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/challenge41_roaa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/fizzbuzz.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/fizzbuzz.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/graph-breadth-first.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/graph-breadth-first.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/graph-breadth-first.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/graph-breadth-first.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/graph-business-trip.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/graph-business-trip.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/graph-business-trip.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/graph-business-trip.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/graph-depth-first.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/graph-depth-first.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/graph-depth-first.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/graph-depth-first.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/graph.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/graph.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/hashMap.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/hashMap.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/hashmap-left-join.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/hashmap-left-join.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/hashmap-left-join.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/hashmap-left-join.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/hashmap-repeated-word.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/hashmap-repeated-word.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/hashmap-repeated-word.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/hashmap-repeated-word.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/mergeSort.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/mergeSort.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/mergeSort.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/mergeSort.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/navigator.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/navigator.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/quickSort.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/quickSort.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/quickSort.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/quickSort.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/stack-queue-animal-shelter.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/stack-queue-animal-shelter.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/stack-queue-brackets.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/stack-queue-brackets.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/stack-queue-brackets.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/stack-queue-brackets.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/stack-queue-pseudo.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/stack-queue-pseudo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/tree-breadth-first.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/tree-breadth-first.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/tree-fizz-buzz.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/tree-fizz-buzz.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/tree-intersection.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/tree-intersection.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/tree-intersection.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/tree-intersection.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/tree-max.md" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Documentations/tree-max.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge10/tree-max.png" beforeDir="false" afterPath="$PROJECT_DIR$/challenges/Whiteboard/tree-max.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge2/array-insert-shift1.png:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge3/array-binary-search.png:Zone.Identifier" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/challenge7/linked-list-kth1.png:Zone.Identifier" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AGNSio23InqQgvm43a6n8DG2tK" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/challenges/Whiteboard" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Roa'a\codeChallenges\data-structures-and-algorithms\challenges\Whiteboard" />
+      <recent name="C:\Users\Roa'a\codeChallenges\data-structures-and-algorithms\challenges\Whiteboards" />
+      <recent name="C:\Users\Roa'a\codeChallenges\data-structures-and-algorithms\challenges\Documentations" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4cf403bd-fb10-4efd-b376-a0f7080b5a87" name="Changes" comment="" />
+      <created>1654631974190</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654631974190</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

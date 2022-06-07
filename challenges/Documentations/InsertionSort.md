@@ -2,7 +2,7 @@
 - write a function to sort an array of integer numbers in ascending order.
 
 ## Whiteboard Process
-![InsertionSor](InsertionSort.png)
+![InsertionSor](../Whiteboard/InsertionSort.png)
 
 ## Approach & Efficiency
 - stop on every number and check if this is the correct place of it by comparing it with the previous numbers, if it is greater than the previous number then it is the correct place, else if it is less than the previous one then we need to continue comparing the other numbers until we find its correct place that is mean that the previous number is less than it.  

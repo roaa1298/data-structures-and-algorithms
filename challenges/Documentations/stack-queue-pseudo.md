@@ -2,7 +2,7 @@
 write a class that has two methods (enQueue, deQueue) implemented by using two stacks (using a first-in, first-out approach)
 
 ## Whiteboard Process
-![pseudoQueue](stack-queue-pseudo.png)
+![pseudoQueue](../Whiteboard/stack-queue-pseudo.png)
 
 ## Approach & Efficiency
 - enQueue : always maintain the right order of the elements in the stack, with the first element staying always at the top, with second element right below it and the new element will be added to the bottom.  

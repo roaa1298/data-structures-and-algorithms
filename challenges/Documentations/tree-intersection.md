@@ -4,7 +4,7 @@
 
 
 ## Whiteboard Process
-![treeIntersection](tree-intersection.png)
+![treeIntersection](../Whiteboard/tree-intersection.png)
 
 ## Approach & Efficiency
 - move the second tree to a hash table, and move the first to a list, and loop through the list and check every element if it's exist in the hash table or not. if it is exists just add it to the result list.
