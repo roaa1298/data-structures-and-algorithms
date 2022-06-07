@@ -21,6 +21,7 @@ import challenges.Trees.data.BTNode;
 import challenges.Trees.structure.BinarySearchTree;
 import challenges.Trees.structure.BinaryTree;
 import challenges.challenge39.TwoNodesConnected;
+import challenges.challenge41.Navigator;
 import challenges.pseudoQueue.pseudoQueue;
 import challenges.queue.structure.Queue;
 import challenges.stack.structure.Stack;
@@ -431,6 +432,18 @@ public class App {
 
         TwoNodesConnected twoNodesConnected=new TwoNodesConnected();
         System.out.println(twoNodesConnected.areTwoNodesConnected(g2,v2,v6));
+
+        System.out.println("--------------------- track browser navigation history --------------------------");
+
+        Navigator navigator=new Navigator();
+        navigator.go("1");
+        navigator.go("2");
+        navigator.go("3");
+        navigator.go("4");
+        System.out.println(navigator.back());
+        System.out.println(navigator.forward());
+        navigator.go("5");
+        System.out.println(navigator.back());
 
     }
 }
