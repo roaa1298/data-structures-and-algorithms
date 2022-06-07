@@ -20,6 +20,7 @@ import challenges.Trees.data.BTNode;
 import challenges.Trees.structure.BinarySearchTree;
 import challenges.Trees.structure.BinaryTree;
 import challenges.challenge39.TwoNodesConnected;
+import challenges.challenge41.Navigator;
 import challenges.pseudoQueue.pseudoQueue;
 import challenges.queue.structure.Queue;
 import challenges.stack.structure.Stack;
@@ -1236,6 +1237,52 @@ class AppTest {
 
         TwoNodesConnected twoNodesConnected=new TwoNodesConnected();
         assertFalse(twoNodesConnected.areTwoNodesConnected(g2, v2, v4));
+    }
+    /////////////////////////////////////// track browser navigation history ////////////////////////////////
+
+    @Test void navigatorTest() throws Exception {
+        List<String> links=new ArrayList<>();
+        Navigator navigator=new Navigator();
+        navigator.go("1");
+        navigator.go("2");
+        navigator.go("3");
+        navigator.go("4");
+        links.add(navigator.back());
+        links.add(navigator.forward());
+        navigator.go("5");
+        links.add(navigator.back());
+        assertEquals("[3, 4, 4]",links.toString());
+    }
+
+    @Test void navigator2Test() throws Exception {
+        List<String> links=new ArrayList<>();
+        Navigator navigator=new Navigator();
+        navigator.go("1");
+        navigator.go("2");
+        navigator.go("3");
+        links.add(navigator.back());
+        assertEquals("[2]",links.toString());
+    }
+
+    @Test void navigator3Test() throws Exception {
+        List<String> links=new ArrayList<>();
+        Navigator navigator=new Navigator();
+        navigator.go("1");
+        navigator.go("2");
+        links.add(navigator.back());
+        navigator.go("3");
+        links.add(navigator.back());
+        assertEquals("[1, 1]",links.toString());
+    }
+    @Test void navigator4Test() throws Exception {
+        List<String> links=new ArrayList<>();
+        Navigator navigator=new Navigator();
+        navigator.go("1");
+        links.add(navigator.back());
+        navigator.go("2");
+        navigator.go("3");
+        links.add(navigator.back());
+        assertEquals("[null, 2]",links.toString());
     }
 
 }
