@@ -14,6 +14,7 @@ import challenges.HashMap.Structure.HashMap;
 import challenges.InsertionSort.InsertionSort;
 import challenges.LeftJoin.LeftJoin;
 import challenges.MergeSort.MergeSort;
+import challenges.Practice.Practice;
 import challenges.QuickSort.QuickSort;
 import challenges.RepeatedWord.RepeatedWord;
 import challenges.TreeIntersection.TreeIntersection;
@@ -444,6 +445,33 @@ public class App {
         System.out.println(navigator.forward());
         navigator.go("5");
         System.out.println(navigator.back());
+
+        System.out.println("--------------------- Second Largest Number --------------------------");
+        BinarySearchTree<Integer> bst=new BinarySearchTree<>();
+        bst.add(50);
+        bst.add(30);
+        bst.add(20);
+        bst.add(40);
+        bst.add(70);
+        bst.add(60);
+        bst.add(80);
+
+        Practice practice=new Practice();
+        System.out.println(practice.secondMax(bst));
+
+        System.out.println("--------------------- graph center --------------------------");
+        Graph star=new Graph();
+        System.out.println(star.addVertex("1"));
+        System.out.println(star.addVertex("2"));
+        System.out.println(star.addVertex("3"));
+        System.out.println(star.addVertex("4"));
+
+        star.addEdges("2","1",150);
+        star.addEdges("2","3",82);
+        star.addEdges("2","4",99);
+        Practice practice2=new Practice();
+        System.out.println(practice2.starGraphCenter(star));
+
 
     }
 }
