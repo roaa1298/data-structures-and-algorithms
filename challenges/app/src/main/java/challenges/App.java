@@ -24,6 +24,7 @@ import challenges.Trees.structure.BinaryTree;
 import challenges.YearToRomanNumerals.YearToRomanNumerals;
 import challenges.challenge39.TwoNodesConnected;
 import challenges.challenge41.Navigator;
+import challenges.largestProduct.LargestProduct;
 import challenges.pseudoQueue.pseudoQueue;
 import challenges.queue.structure.Queue;
 import challenges.stack.structure.Stack;
@@ -478,5 +479,9 @@ public class App {
 
         YearToRomanNumerals intToRom=new YearToRomanNumerals();
         System.out.println(intToRom.yearToRoman("2020"));
+
+        System.out.println("----------------- largest product possible of 3 integers from within a list ----------------------");
+        LargestProduct largestProduct=new LargestProduct();
+        System.out.println(largestProduct.largestProduct(new int[]{4, 0, -5, 3, -1, -6, 2}));
     }
 }
